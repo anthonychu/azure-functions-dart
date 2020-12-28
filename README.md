@@ -45,6 +45,7 @@ It's recommended that you use this devcontainer, as it allows you to develop and
     mkdir -p handler/build
     dart compile exe -o handler/build/handler handler/bin/handler.dart
     ```
+
 1. In the VS Code command palette, run the *Azure Functions: Deploy to Function App...* command. Fill in the following info:
 
     - **Subscription** - choose your subscription
@@ -55,3 +56,10 @@ It's recommended that you use this devcontainer, as it allows you to develop and
 
 1. When the app is deployed, the URL should be displayed in the output.
 
+## How this works
+
+In the *handler* folder is a Dart custom handler app. A custom handler is a process that can respond to HTTP requests.
+
+*host.json* tells the Azure Functions host to start the compiled binary as a custom handler. When running locally, these settings are overridden in *local.settings.json* to start the handler without explicity compilation and allows a debugger to attach.
+
+There's a single function defined in the *default* folder. It's an HTTP function that forwards all requests to `/api/*` to the custom handler. You can add other functions with other trigger types, but this is currently not covered in this sample.
