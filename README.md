@@ -46,4 +46,13 @@ It's recommended that you use this devcontainer, as it allows you to develop and
     mkdir -p handler/build
     dart compile exe -o handler/build/handler handler/bin/handler.dart
     ```
+1. In the VS Code / Codespaces command palette, run the *Azure Functions: Deploy to Function App...* command. Fill in the following info:
+
+    - **Subscription** - choose your subscription
+    - **Create new Function App in Azure (advanced)** - make sure you choose **advanced** to be able to select Linux later.
+    - **Runtime stack** - select **Custom Handler**
+    - **Select an OS** - select **Linux**
+    - For the rest of the options, take the defaults.
+
+1. When the app is deployed, the URL should be displayed in the output.
 
