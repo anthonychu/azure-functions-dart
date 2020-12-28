@@ -10,16 +10,15 @@ It's recommended that you use this devcontainer, as it allows you to develop and
 
 ### Run it locally
 
-1. Fork this repo in GitHub.
+> This should work in GitHub Codespaces as well, although I've had some trouble today with disconnections.
 
-1. In the forked repo's homepage, click the *Code* dropdown.
+1. Clone this repo from GitHub.
 
-    * Select *Open in Codespaces*
-    * Then click *+ New Codespace* to start a Codespace
+1. Make sure you have the VS Code with the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed and Docker is running on your machine.
 
-    It might take a few minutes for the Codespace to start.
+1. In the VS Code command pallete (<kbd>F1<kbd>), run the *Remote Containers: Reopen folder in container* command. VS Code will reopen in the development environment running in a Docker container.
 
-1. When the Codespace opens, open a terminal (<kbd>Ctrl+`</kbd>) and check that Dart and Azure Functions Core Tools are installed.
+1. Open a terminal in VS Code (<kbd>Ctrl+`</kbd>). Ensure Dart and Azure Functions Core Tools are installed. 
 
     ```bash
     dart --version
@@ -34,7 +33,7 @@ It's recommended that you use this devcontainer, as it allows you to develop and
 
     This also starts the Dart custom handler at `handler/bin/handler.dart`.
 
-1. With the function app still running, open it in a browser. Run the *Open port in browser* command. Select `7071`. A new browser tab should open to the root of the function app.
+1. With the function app still running, open it in a browser. Run the *Open port in browser* command. Select `7071`. A browser should open to the root of the function app.
 
 1. Append `/api/hello` to the URL to hit one of the functions in the Dart custom handler.
 
@@ -46,7 +45,7 @@ It's recommended that you use this devcontainer, as it allows you to develop and
     mkdir -p handler/build
     dart compile exe -o handler/build/handler handler/bin/handler.dart
     ```
-1. In the VS Code / Codespaces command palette, run the *Azure Functions: Deploy to Function App...* command. Fill in the following info:
+1. In the VS Code command palette, run the *Azure Functions: Deploy to Function App...* command. Fill in the following info:
 
     - **Subscription** - choose your subscription
     - **Create new Function App in Azure (advanced)** - make sure you choose **advanced** to be able to select Linux later.
