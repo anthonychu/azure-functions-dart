@@ -16,7 +16,7 @@ It's recommended that you use this devcontainer, as it allows you to develop and
 
 1. Make sure you have the VS Code with the [Remote Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed and Docker is running on your machine.
 
-1. In the VS Code command pallete (<kbd>F1<kbd>), run the *Remote Containers: Reopen folder in container* command. VS Code will reopen in the development environment running in a Docker container.
+1. In the VS Code command pallete (<kbd>F1</kbd>), run the *Remote Containers: Reopen folder in container* command. VS Code will reopen in the development environment running in a Docker container.
 
 1. Open a terminal in VS Code (<kbd>Ctrl+`</kbd>). Ensure Dart and Azure Functions Core Tools are installed. 
 
