@@ -6,7 +6,6 @@
     "configurations": [
         {
             "name": "Attach to Dart",
-            "cwd": "handler",
             "request": "attach",
             "type": "dart",
             "preLaunchTask": "func: host start"
