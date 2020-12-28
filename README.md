@@ -34,7 +34,9 @@ It's recommended that you use this devcontainer, as it allows you to develop and
 
     This also starts the Dart custom handler at `handler/bin/handler.dart`.
 
-1. 
+1. With the function app still running, open it in a browser. Run the *Open port in browser* command. Select `7071`. A new browser tab should open to the root of the function app.
+
+1. Append `/api/hello` to the URL to hit one of the functions in the Dart custom handler.
 
 ### Deploy to Azure
 
