@@ -10,7 +10,7 @@ It's recommended that you use this devcontainer, as it allows you to develop and
 
 ### Run it locally
 
-> This should work in GitHub Codespaces as well, although I've had some trouble today with disconnections.
+> This should work in GitHub Codespaces as well, although I've had some trouble today.
 
 1. Clone this repo from GitHub.
 
